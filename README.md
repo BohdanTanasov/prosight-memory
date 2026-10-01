@@ -9,3 +9,6 @@ for. The format is [MEMORY-FORMAT.md](MEMORY-FORMAT.md); the decision behind it 
 - **Append only.** A change is a new line; nothing is edited or deleted.
 - **Agents propose, people confirm.** `python poc/memory.py list --status proposed`, then
   `python poc/memory.py confirm <id>` / `reject <id>` (run from prosight-graph with its venv).
+- **Where agents meet it.** MCP `prosight-memory` (`get_context_pack`, `finalize_task`) and three Claude Code hooks:
+  the memory of the branch's ticket and changed files at session start, the memory of a file before its first edit,
+  one request to propose what was learned at the end. Registered at user scope; silent outside ~/Projects/prosight.
