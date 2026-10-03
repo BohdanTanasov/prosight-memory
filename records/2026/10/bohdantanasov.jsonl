@@ -65,3 +65,4 @@
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_ea3d9c6f39e9","target":"mem_64c5bd4b3569","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T08:37:11Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_be4d7790f2c2","target":"mem_3fc6cf9ca8ff","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:34:48Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_6e5f6ceb40ef","target":"mem_c6b5bfc31994","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:34:57Z"}
+{"schema":"prosight_memory_v1","type":"status","event_id":"mem_040d65e891a9","target":"mem_0de451ce5d72","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:35:05Z"}
