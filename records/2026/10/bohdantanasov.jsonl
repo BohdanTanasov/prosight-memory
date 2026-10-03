@@ -73,3 +73,4 @@
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_18eaabaa030e","target":"mem_7ac8be1bcd62","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:36:22Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_b6c3bc4946a3","target":"mem_0d6d9d6e4490","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:36:33Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_0b0e686511d1","target":"mem_02c6c8ac6c7e","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:36:51Z"}
+{"schema":"prosight_memory_v1","type":"status","event_id":"mem_2f9e2aa99ce4","target":"mem_df45aec3858e","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T20:36:53Z"}
