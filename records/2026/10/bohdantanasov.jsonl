@@ -90,3 +90,4 @@
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_55255b5a130c","target":"mem_991594881e3a","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T21:14:46Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_cffc70e4176a","target":"mem_25f82c75d67c","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T21:14:47Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_2919d96bead1","target":"mem_39f4c858818e","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T21:14:47Z"}
+{"schema":"prosight_memory_v1","type":"status","event_id":"mem_c6d68026e2e5","target":"mem_1d89e0328ffe","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-03T21:14:51Z"}
