@@ -412,3 +412,4 @@
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_e37c252ad59a","target":"mem_353d304d66ce","status":"rejected","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-21T16:09:21Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_3ff98a6d6024","target":"mem_fe824c97ca96","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-21T16:09:26Z"}
 {"schema":"prosight_memory_v1","type":"status","event_id":"mem_27c784bea819","target":"mem_6a602fd2ad46","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-21T16:09:30Z"}
+{"schema":"prosight_memory_v1","type":"status","event_id":"mem_990563e4d999","target":"mem_5d0136729013","status":"confirmed","by":"person:bohdantanasov","reason":null,"author":"bohdantanasov","at":"2026-10-21T16:09:36Z"}
