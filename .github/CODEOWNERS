@@ -1,0 +1,5 @@
+# The team memory (D457), written by DevDeck: everything but records and pages waits for a maintainer’s review
+# when the branch rules „Require review from Code Owners". Records and pages are checked by the guard.
+* @BohdanTanasov
+/records/
+/pages/
