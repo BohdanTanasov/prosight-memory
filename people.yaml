@@ -1,0 +1,6 @@
+# Who is who in the team memory (D457): each records author’s account on the host, and the maintainers — the
+# people who may change anything but records and pages, and approve another’s change to it. Read by the guard
+# (guard/check.mjs) from the target branch only. A change here needs a maintainer.
+maintainers: [bohdantanasov]
+people:
+  bohdantanasov: {github: "BohdanTanasov"}
