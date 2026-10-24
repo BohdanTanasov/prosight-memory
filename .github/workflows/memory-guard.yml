@@ -1,0 +1,44 @@
+# The team memory's guard (v3), installed by DevDeck: do not edit — a change here needs a maintainer's
+# approval, and DevDeck offers each new version as a pull request.
+#
+# Every pull request into a protected branch is checked by the guard OF THE TARGET BRANCH (`pull_request_target`: this
+# file and guard/check.mjs come from the target, never from the PR), on the PR's commits read as data: the PR's code is
+# never run. Who wrote the PR and who approved it come from GitHub, never from a commit or a line.
+#
+# A maintainer who approves a PR that changes anything but records and pages: approve, then „Re-run jobs" here.
+# A PR that takes another person's record waits for their approval (or a topic owner's, a maintainer's) of its last
+# commit; the remover's DevDeck runs this job again once it is there — or „Re-run jobs" here.
+name: memory-guard
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+permissions:
+  contents: read
+  pull-requests: read
+concurrency:
+  group: memory-guard-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  guard:
+    name: memory-guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: The target branch (never the PR's code)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: The PR's commits, as data
+        run: git fetch --no-tags origin "+refs/pull/${PR}/head:refs/memory-guard/head"
+        env:
+          PR: ${{ github.event.pull_request.number }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: The guard
+        run: node guard/check.mjs --base HEAD --head "${HEAD_SHA}"
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,22 @@
+# The team memory's guard (v3), installed by DevDeck: do not edit — a change here needs a maintainer's
+# approval, and DevDeck offers each new version as a pull request.
+#
+# Every pull request is checked by the guard OF THE TARGET BRANCH (guard/check.mjs read from it, never from the PR), on
+# the PR's commits read as data. Who wrote the PR and who approved it come from Bitbucket's API with the repository
+# variable MEMORY_GUARD_TOKEN (a repository access token, scope: pull requests read; secured).
+# Bitbucket runs this file as the PR's branch has it: see team-memory.md „Protecting the memory" for what that leaves.
+# A PR that takes another person's record waits for their approval (or a topic owner's, a maintainer's) given after its
+# last commit was pushed; the remover's DevDeck runs this pipeline again once it is there — or „Rerun" here.
+image: node:22
+clone:
+  depth: full
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+          name: memory-guard
+          max-time: 5
+          script:
+            - git fetch --no-tags origin "+refs/heads/${BITBUCKET_PR_DESTINATION_BRANCH}:refs/remotes/origin/${BITBUCKET_PR_DESTINATION_BRANCH}"
+            - git show "origin/${BITBUCKET_PR_DESTINATION_BRANCH}:guard/check.mjs" > /tmp/memory-guard.mjs
+            - node /tmp/memory-guard.mjs --base "origin/${BITBUCKET_PR_DESTINATION_BRANCH}" --head "${BITBUCKET_COMMIT}"
