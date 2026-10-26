@@ -1,6 +1,6 @@
 # CRM › Recruitment emails
 
-owner: bohdantanasov (most confirmed records) · records: 5 (5 confirmed) · rules guarded by a test: 0 of 2 · last change: 2026-10-16
+owner: bohdantanasov (most confirmed records) · records: 3 (3 confirmed) · rules guarded by a test: 0 of 2 · last change: 2026-10-16
 
 > Compiled by DevDeck from the team memory’s records — do not edit by hand: a change here is a record.
 
@@ -20,13 +20,3 @@ owner: bohdantanasov (most confirmed records) · records: 5 (5 confirmed) · rul
   guarded: no test yet
   where: monorepo-frontend:packages/email-templates/emails/recruitment/hladame-posily.tsx
   TD-2146 · TD-2146#D14
-
-## Tried — did not work
-- Typing into the CRM wizard's meeting date segments (dd/mm/yyyy spinbuttons) from Playwright is unreliable: digits get dropped between keystrokes (19 -> 09, 2026 -> 0026), and ArrowUp/PageUp stepping does not work either. Pick the date in the calendar instead (Open datepicker, then the day button named like 'pondelok 19. októbra 2026'); past days are clickable. [mem_a933282a7e19]
-  where: automation-tests:helpers/crm/email-wizard.ts:285
-  TD-2146
-
-## Testing notes (what a spec must know)
-- Nábor cards in the email wizard have empty descriptions, so their accessible button name is exactly the title (FS cards append the description). A locator expecting `^<title> ` misses every Nábor card; match `^<title>(\s|$)`. [mem_5f1a96920d0f]
-  where: automation-tests:helpers/crm/email-wizard.ts:329
-  PRO-10177

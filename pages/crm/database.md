@@ -1,11 +1,11 @@
 # CRM › Database
 
-owner: bohdantanasov (most confirmed records) · records: 4 (3 confirmed · 1 proposed) · rules guarded by a test: 3 of 3 · last change: 2026-10-21
+owner: bohdantanasov (most confirmed records) · records: 3 (3 confirmed) · rules guarded by a test: 3 of 3 · last change: 2026-10-21
 
 > Compiled by DevDeck from the team memory’s records — do not edit by hand: a change here is a record.
 
 ## Must not break
-- Keep the week presets, month cells and year arrows role=button with their Slovak labels. [mem_f0739978efbb] (unconfirmed)
+- Keep the week presets, month cells and year arrows role=button with their Slovak labels. [mem_f0739978efbb]
   why: automation-tests (crm-filters.spec.ts, crm-nabor-kanban.spec.ts) click the presets with getByRole("button", { name: "Minulý týždeň" }) and the clear × by "Vymazať výber rýchleho filtra"; DropdownMenuItem (role menuitem) breaks them.
   guarded: test:automation-tests:tests/crm/crm-filters.spec.ts:253, test:automation-tests:tests/crm/crm-nabor-kanban.spec.ts:59
   where: monorepo-frontend:apps/crm/src/features/contact/ui/quick-case-filter-dropdown.tsx:196
@@ -20,8 +20,3 @@ owner: bohdantanasov (most confirmed records) · records: 4 (3 confirmed · 1 pr
   guarded: test:monorepo-frontend:apps/crm/src/features/contact/utils/filter-transforms.test.ts:27
   where: monorepo-frontend:apps/crm/src/features/contact/utils/filter-transforms.ts:121
   PRO-10055
-
-## Tried — did not work
-- In Databáza the row's Nábor/FS status menu does not open on a mouse click, because the table's dnd-kit sensors take the pointer press. Focus the status button and press Enter, then focus the menuitem and press Enter. The 'Nový stav' picker inside the status modal opens on a normal click. [mem_d3c0fc8788df]
-  where: automation-tests:helpers/crm/email-wizard.ts:420
-  TD-2146

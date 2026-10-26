@@ -1,8 +1,16 @@
-# CRM › Nábor board
+# CRM › Nabor board
 
-owner: bohdantanasov (most confirmed records) · records: 4 (4 confirmed) · rules guarded by a test: 0 of 0 · last change: 2026-10-17
+owner: bohdantanasov (most confirmed records) · records: 3 (3 confirmed) · rules guarded by a test: 0 of 1 · last change: 2026-10-24
 
 > Compiled by DevDeck from the team memory’s records — do not edit by hand: a change here is a record.
+
+## Must not break
+- The recruitment-step-modal shows contact name/phone/email read from the cached card data (`view.card.contact`) held by the `trpc.recruitmentKanban.listByColumn` query, not from a fresh contact fetch. [mem_1ea68098d5c4]
+  why: Reviewer noted the modal reads contact fields from `view.card.contact` sourced from `cardsById` over `recruitmentKanban.listByColumn`, so without invalidating that query a contact edit stays invisible there.
+  do: Any place that edits a contact used by a recruitment kanban card must invalidate/refetch `trpc.recruitmentKanban.listByColumn` (e.g. via `pathFilter()` in its `onSettled`), not just the contact's own query.
+  guarded: no test yet
+  where: monorepo-frontend:apps/crm/src/features/recruitment-kanban/containers/recruitment-step-modal.tsx:184
+  PRO-10062
 
 ## Decisions and why
 - Render with ContactProcessStatus.label(status, "recruitment"), never shortLabel; pass processType="recruitment" to ContactStatusPill. [mem_67a0b959727e]
@@ -12,12 +20,4 @@ owner: bohdantanasov (most confirmed records) · records: 4 (4 confirmed) · rul
 - A nábor step whose outcome books nothing (Ďalší ÚS, Ďalšie KS) sends the corrected held meeting also as meeting*, like FS. [mem_3bba1c534f9e]
   why: The deal booking prefills the modal and the history; held_meeting alone is only the step snapshot, so an edit stored there was never shown again (mem_538bbc132547, the bug this decision closed).
   where: monorepo-frontend:apps/crm/src/features/recruitment-kanban/board/recruitment-step-form.ts:272
-  PRO-10055
-
-## Testing notes (what a spec must know)
-- In the Nábor step modal, the outcomes are buttons with role=radio inside a radiogroup labelled 'Aký je výstup?'. Every other choice (reason, removal-status, cooperation-type, closing-rating) is a RadioField: native inputs grouped only by their name attribute, with no radiogroup role. Tests must scope those choices with input[name=...], not getByRole('radiogroup'). [mem_3c6f4df3abf0]
-  where: monorepo-frontend:apps/crm/src/features/recruitment-kanban/ui/board/recruitment-step-modal-view.tsx:172
-  PRO-10055
-- The Nábor board's h1 renders its count as a span with aria-label '<n> rozpracovaných' (plural-aware). So the heading's accessible name is probably not literally 'Nábor (12)'; read the count from the text content. The count covers only open deals: Dohodnutá spolupráca is excluded. [mem_ec69f11dac26]
-  where: monorepo-frontend:apps/crm/src/features/recruitment-kanban/ui/board/recruitment-kanban-board-view.tsx:77
   PRO-10055
