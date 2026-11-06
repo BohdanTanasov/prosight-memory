@@ -47,6 +47,12 @@
 | --- | --- | --- | --- | --- | --- |
 | [Monorepo frontend](monorepo-frontend.md) | bohdantanasov (most confirmed records) | 2 | 0 of 2 | 0 | 2026-10-24 |
 
+## Platform API
+
+| Topic | Owner | Records | Rules guarded by a test | Open | Last change |
+| --- | --- | --- | --- | --- | --- |
+| [Platform API](platform-api.md) | bohdantanasov (most confirmed records) | 1 | 0 of 1 | 0 | 2026-10-28 |
+
 ## Platform documents
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
@@ -76,3 +82,5 @@
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
 | --- | --- | --- | --- | --- | --- |
 | [Stream](stream.md) | bohdantanasov (most confirmed records) | 2 | 1 of 2 | 0 | 2026-10-08 |
+
+Records with no topic: 1.
