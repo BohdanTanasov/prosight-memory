@@ -41,6 +41,12 @@
 | --- | --- | --- | --- | --- | --- |
 | [eVisual](evisual.md) | bohdantanasov (most confirmed records) | 2 | 1 of 2 | 0 | 2026-10-22 |
 
+## Infrastructure
+
+| Topic | Owner | Records | Rules guarded by a test | Open | Last change |
+| --- | --- | --- | --- | --- | --- |
+| [Infrastructure › Prosight infrastructure](infrastructure/prosight-infrastructure.md) | bohdantanasov (most confirmed records) | 7 | 0 of 7 | 0 | 2026-11-06 |
+
 ## Monorepo frontend
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
