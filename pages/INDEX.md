@@ -12,7 +12,8 @@
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
 | --- | --- | --- | --- | --- | --- |
-| [Backoffice](backoffice.md) | bohdantanasov (most confirmed records) | 5 | 0 of 2 | 0 | 2026-10-22 |
+| [Backoffice](backoffice.md) | bohdantanasov (most confirmed records) | 3 | 0 of 2 | 0 | 2026-10-22 |
+| [Backoffice › Spolupracovníci](backoffice/spolupracovnici.md) | bohdantanasov (most confirmed records) | 3 | 0 of 0 | 0 | 2026-11-12 |
 
 ## CRM
 
@@ -45,6 +46,7 @@
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
 | --- | --- | --- | --- | --- | --- |
+| [Infrastructure](infrastructure.md) | bohdantanasov (most confirmed records) | 1 | 0 of 1 | 0 | 2026-11-12 |
 | [Infrastructure › Prosight infrastructure](infrastructure/prosight-infrastructure.md) | bohdantanasov (most confirmed records) | 7 | 0 of 7 | 0 | 2026-11-06 |
 
 ## Monorepo frontend
@@ -89,4 +91,4 @@
 | --- | --- | --- | --- | --- | --- |
 | [Stream](stream.md) | bohdantanasov (most confirmed records) | 2 | 1 of 2 | 0 | 2026-10-08 |
 
-Records with no topic: 1.
+Records with no topic: 2.
