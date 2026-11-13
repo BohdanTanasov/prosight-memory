@@ -49,6 +49,12 @@
 | [Infrastructure](infrastructure.md) | bohdantanasov (most confirmed records) | 1 | 0 of 1 | 0 | 2026-11-12 |
 | [Infrastructure › Prosight infrastructure](infrastructure/prosight-infrastructure.md) | bohdantanasov (most confirmed records) | 7 | 0 of 7 | 0 | 2026-11-06 |
 
+## Metodika db
+
+| Topic | Owner | Records | Rules guarded by a test | Open | Last change |
+| --- | --- | --- | --- | --- | --- |
+| [Metodika db](metodika-db.md) | bohdantanasov (most confirmed records) | 1 | 0 of 1 | 0 | 2026-11-13 |
+
 ## Monorepo frontend
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
