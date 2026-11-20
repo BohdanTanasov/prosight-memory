@@ -89,7 +89,7 @@
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
 | --- | --- | --- | --- | --- | --- |
-| [Platform salesmen](platform-salesmen.md) | bohdantanasov (most confirmed records) | 2 | 0 of 2 | 0 | 2026-10-21 |
+| [Platform salesmen](platform-salesmen.md) | bohdantanasov (most confirmed records) | 3 | 0 of 3 | 0 | 2026-11-20 |
 
 ## QA
 
