@@ -15,6 +15,12 @@
 | [Backoffice](backoffice.md) | bohdantanasov (most confirmed records) | 3 | 0 of 2 | 0 | 2026-10-22 |
 | [Backoffice › Spolupracovníci](backoffice/spolupracovnici.md) | bohdantanasov (most confirmed records) | 3 | 0 of 0 | 0 | 2026-11-12 |
 
+## Components
+
+| Topic | Owner | Records | Rules guarded by a test | Open | Last change |
+| --- | --- | --- | --- | --- | --- |
+| [Components](components.md) | bohdantanasov (most confirmed records) | 1 | 0 of 1 | 0 | 2026-11-13 |
+
 ## CRM
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
