@@ -46,7 +46,7 @@
 
 | Topic | Owner | Records | Rules guarded by a test | Open | Last change |
 | --- | --- | --- | --- | --- | --- |
-| [eVisual](evisual.md) | bohdantanasov (most confirmed records) | 2 | 1 of 2 | 0 | 2026-10-22 |
+| [eVisual](evisual.md) | bohdantanasov (most confirmed records) | 3 | 1 of 3 | 0 | 2026-11-24 |
 
 ## Infrastructure
 
@@ -103,4 +103,4 @@
 | --- | --- | --- | --- | --- | --- |
 | [Stream](stream.md) | bohdantanasov (most confirmed records) | 2 | 1 of 2 | 0 | 2026-10-08 |
 
-Records with no topic: 3.
+Records with no topic: 4.
